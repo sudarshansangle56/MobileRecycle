@@ -1,0 +1,111 @@
+body{
+  overflow-x: hidden;
+}
+
+.ok {
+  height: 500px;
+  background-color: rgb(244, 207, 207);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.animated-text {
+  display: inline-block;
+  animation: fadeEffect 2s infinite;
+}
+
+@keyframes fadeEffect {
+  0% { opacity: 0; transform: translateY(-5px); } /* Start fade-in */
+  50% { opacity: 1; transform: translateY(0px); } /* Fully visible */
+  100% { opacity: 0; transform: translateY(5px); } /* Fade-out */
+}
+
+
+
+.rotating-image {
+  animation: rotate360 15s linear infinite;
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+.ok h1 {
+  font-size: 60px;
+  margin-left: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  color: rgb(84, 82, 82);
+
+}
+
+.para h1{
+  font-size: 50px;
+
+}
+.para p{
+ 
+  width: 50%;
+}
+
+@media (max-width: 768px) { 
+  .para{
+    gap: 30px;
+  }
+  .para h1 { 
+    font-size: 30px; 
+  
+  }
+
+  .para p { 
+    width: 85%; 
+  }
+}
+
+.para {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  justify-items: center;
+  min-height: 400px;
+
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .para {
+    gap: 150px;
+  }
+}
+
+.cate{
+  display: flex;
+  min-height: 800px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  background-color: rgb(244, 207, 207);
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardcall{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+.head{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.img2 img{
+  height: 300px;
+  margin-left: 40px;
+}
