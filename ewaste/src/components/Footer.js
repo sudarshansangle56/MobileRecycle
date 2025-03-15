@@ -4,7 +4,8 @@ function Footer() {
   return (
     <footer
       className="d-flex flex-column align-items-center justify-content-center border-top"
-      style={{ height: "390px", backgroundColor: "rgb(244, 207, 207)" }}
+      style={{ height: "390px", backgroundColor: "rgb(118, 225, 122)" }}
+     
     >
       {/* Logo Section */}
       <div className="mb-3">

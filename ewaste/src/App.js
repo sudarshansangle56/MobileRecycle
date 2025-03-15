@@ -8,6 +8,8 @@ import Vision from "./components/VIsion";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import AdminPage from "./components/AdminPage";
+import IMEIChecker from "./components/IMEIChecker";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/vision" element={<Vision />} />
           <Route path="/sell" element={<ContactForm />} />
           <Route path="/admin" element={<AdminPage />} />
+          <Route path="/IMEI" element={<IMEIChecker />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </div>

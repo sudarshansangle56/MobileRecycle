@@ -1,13 +1,52 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
   const [submittedData, setSubmittedData] = useState([]);
+  const [accessDenied, setAccessDenied] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve data from localStorage
-    const data = JSON.parse(localStorage.getItem("submittedForms")) || [];
-    setSubmittedData(data);
+    const verifyAdmin = async () => {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        setAccessDenied(true);
+        return;
+      }
+
+      try {
+        const response = await fetch("http://localhost:5000/admin", {
+          headers: { Authorization: token },
+        });
+
+        if (!response.ok) {
+          throw new Error("Unauthorized");
+        }
+
+        // If admin is verified, fetch the submissions data
+        const dataResponse = await fetch("http://localhost:5000/submissions", {
+          headers: { Authorization: token },
+        });
+
+        const data = await dataResponse.json();
+        setSubmittedData(data);
+      } catch (error) {
+        setAccessDenied(true);
+      }
+    };
+
+    verifyAdmin();
   }, []);
+
+  if (accessDenied) {
+    return (
+      <div className="container mt-4 text-center">
+        <h2 className="text-danger">Access Denied</h2>
+        <p className="text-muted">Admins only.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-4">
@@ -26,6 +65,7 @@ function AdminPage() {
               <th>Company</th>
               <th>Purchase Date</th>
               <th>Price (INR)</th>
+              <th>IMEI</th>
             </tr>
           </thead>
           <tbody>
@@ -39,6 +79,7 @@ function AdminPage() {
                 <td>{entry.productCompany}</td>
                 <td>{entry.purchaseDate}</td>
                 <td>{entry.price}</td>
+                <td>{entry.imei || "N/A"}</td>
               </tr>
             ))}
           </tbody>

@@ -4,6 +4,7 @@ function Navbar() {
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
         <a class="navbar-brand" href="#">
           EcoRestore
         </a>
@@ -35,12 +36,13 @@ function Navbar() {
                Admin
              </Link>
            </li>
-            <Link
-              to="/sell"
-              className="bg-blue-500 px-4 py-2 rounded text-white"
-            >
-              Sell
-            </Link>
+           <li className="nav-item flex">
+             
+             <Link className="nav-link" to="/login">
+               Login
+             </Link>
+           </li>
+          
           </ul>
         </div>
       </nav>
