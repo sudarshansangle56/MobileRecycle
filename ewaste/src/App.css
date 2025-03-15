@@ -1,11 +1,62 @@
 body{
   overflow-x: hidden;
+ 
+}
+
+.white{
+  color: white;
+}
+.infoo{
+  width: 40%;
+  
+}
+.infoo p{
+  font-size: 18px;
+}
+.infoo h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 55px;
+}
+.imgdet {
+  width: 100vw;
+  height: 70vh;
+  gap: 70px;
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  align-items: center;
+  justify-content: center; /* Fix: Changed justify-items to justify-content */
+}
+
+.imgdet img {
+  
+  border-radius: 10px;
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+}
+.visionok{
+  max-width: 100%;
+  height: 65vh;
+  gap: 65px;
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center; 
+  margin-bottom: 100px;
+}
+.visionok img{
+  border-radius: 10px;
+  height: 450px;
+  width: 640px;
+
 }
 
 .ok {
   height: 500px;
-  background-color: rgb(118, 225, 122);
+  background-color: rgba(37, 134, 66, 0.77);
   display: flex;
+  color: white;
   align-items: center;
   justify-content: space-between;
   
@@ -41,8 +92,8 @@ body{
 .ok h1 {
   font-size: 60px;
   margin-left: 10px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-  color: rgb(84, 82, 82);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 255, 255);
 
 }
 
@@ -85,13 +136,17 @@ body{
     gap: 150px;
   }
 }
+.head{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 60px;
+}
 .cate{
   display: flex;
   min-height: 800px;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  background-color: rgb(118, 225, 122);
+  background-color: rgba(112, 216, 145, 0.651);
   flex-direction: column;
   align-items: center;
 }
@@ -121,4 +176,58 @@ body{
     padding-top:40px;
     padding-bottom: 40px;
   }
+}
+/* 
+login css */
+/* login.css */
+
+/* Styles for the login container */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading inside login */
+.login-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styles */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect for button */
+.login-container button:hover {
+  background: #0056b3;
+}
+
+/* Error message */
+.login-container .text-danger {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
 }

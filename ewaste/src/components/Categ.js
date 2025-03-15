@@ -5,7 +5,7 @@ function Categ() {
   return (
     <div className="cate">
       <div className="head">
-        <h2>Sell Your Old Device Now</h2>
+        <h1>Sell Your Old Device Now</h1>
       </div>
 
       <div className="cardcall">

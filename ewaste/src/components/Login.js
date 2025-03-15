@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ function Login() {
   };
 
   return (
-    <div className="container mt-4 text-center">
+    <div className="login-container">
       {isLoggedIn ? (
         <>
           <h2>Welcome, Admin</h2>

@@ -5,6 +5,7 @@ import Work from "./Work";
 import Categ from "./Categ";
 import VIsion from "./VIsion";
 import Footer from "./Footer";
+import Img from "./Img";
 
 function Front() {
   const texts = [
@@ -37,18 +38,19 @@ function Front() {
         />
           <h1>
             Recycle Your E-Waste <br />
-            <span className={`animated-text ${fade ? "fade-in" : "fade-out"}`}>
-              {texts[index]}
-            </span>
+            Securely & Sustainably!
+            
           </h1>
         </div>
         <div>
           <Carousel />
         </div>
       </div>
-      <Work />
+      <Img/>
+     
       <Categ />
       <VIsion />
+      
     </div>
   );
 }
