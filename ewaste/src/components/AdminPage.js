@@ -41,10 +41,12 @@ function AdminPage() {
 
   if (accessDenied) {
     return (
-      <div className="container mt-4 text-center">
-        <h2 className="text-danger">Access Denied</h2>
-        <p className="text-muted">Admins only.</p>
+      <div className="acc">
+    <div className="container mt-4 text-center">
+        <h2 className="text-danger">Access Denied  <br />Only Admin can Access this data</h2>
       </div>
+      </div>
+  
     );
   }
 
@@ -54,6 +56,7 @@ function AdminPage() {
       {submittedData.length === 0 ? (
         <p className="text-center">No submissions yet.</p>
       ) : (
+        <div className="acc">
         <table className="table table-bordered mt-3">
           <thead className="table-dark">
             <tr>
@@ -81,10 +84,13 @@ function AdminPage() {
                 <td>{entry.price}</td>
                 <td>{entry.imei || "N/A"}</td>
               </tr>
+              
             ))}
           </tbody>
         </table>
+        </div>
       )}
+
     </div>
   );
 }

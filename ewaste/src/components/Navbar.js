@@ -27,13 +27,13 @@ function Navbar() {
             <li className="nav-item flex">
              
               <Link className="nav-link" to="/sell">
-                Recycle
+                Sell
               </Link>
             </li>
             <li className="nav-item flex">
              
              <Link className="nav-link" to="/admin">
-               Admin
+               User Data
              </Link>
            </li>
            <li className="nav-item flex">

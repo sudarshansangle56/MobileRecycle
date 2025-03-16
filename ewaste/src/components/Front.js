@@ -47,9 +47,9 @@ function Front() {
         </div>
       </div>
       <Img/>
-     
-      <Categ />
       <VIsion />
+      <Categ />
+     
       
     </div>
   );
